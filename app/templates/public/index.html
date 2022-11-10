@@ -1,0 +1,55 @@
+{% extends "public/templates/public_template.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main%}
+<section>
+
+    <div>
+        <img src="static/img/sl-hjd1-500x100.png">
+    </div>
+
+    <form action="#" method= "POST">
+        <p>Phone Number:</p>
+        <p><input name="phnum"></p>
+        <p>SMS text:</p>
+        <p><textarea name="smstext"></textarea></p>
+        <p><input type="submit" value="submit"></p>
+    </form>
+
+    <img src="static/img/happy2.png">
+      <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v15.0&appId=510946243854318&autoLogAppEvents=1" nonce="EdfZXKFE"></script>    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '510946243854318',
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v15.0'
+        });
+
+        FB.AppEvents.logPageView();
+
+        };
+
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <h3>Login to Social Leaks with your Facebook Account</h3>
+    <br>
+    <br>
+    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
+</section>
+
+{% endblock %}

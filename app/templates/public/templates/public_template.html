@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <header>
+        <div class="container">
+
+            <img src="static/img/1-250x50.png" alt="logo" class="logo">
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a> </li>
+                    <li><a href="#">Services</a> </li>
+                    <li><a href="#">Downloads</a> </li>
+                    <li><a href="#">Join</a> </li>
+                    <li><a href="#">Contact</a> </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
